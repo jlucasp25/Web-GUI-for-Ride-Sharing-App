@@ -1,0 +1,23 @@
+1. Tipos Partilhados: (DONE I GUESS)
+Copiar classes do trabalho 2 para rsa.shared e os outros 2 pacotes
+Objetos a ser enviados ao cliente tem de ser serializaveis e possuir construtor sem argumentos visivel ou nao possuir construtor
+
+2. Servidor (FEITO TUDO)
+rsa.service.manager dará origem à classe de implementação de serviço a colocar em rsa.server.
+O interface extraido dará origem ao interface síncrono do serviço a color no pacote rsa.client.
+(Refactor - > Extract Interface)
+A partir deste ultimo deve-se criar o interface assíncrono.
+
+3. Cliente
+No cliente ficam as classes que produzem e geram a interface gráfica do utilizador, bem como a comunicação RPC com o server.
+Este pacote deverá ter um unico ponte de entrada, uma classe implementando EntryPoint que mantém a referencia para comunicação assincrona.
+O ficheiro HTML e CSS devera ser preparado na pasta war.
+
+A GUI deve ser organizada com o ponto de acesso em 4 areas, cada uma com uma classe de widgets extendendo a classe Composite,:
+	- registo e autenticação (nick,nome,password)
+	- gestão de carros (matricula,marca,modelo,cor)
+	- preferencias (tipo de emparelhamento)
+	- boleias (destino, custo, preço, carro)
+	
+Nas boleias, usar uma lista de destinos ou um mapa (API do google maps / GWT)
+Para invocar o método updateRide() a cada mudança de posição usar GeoLocation.

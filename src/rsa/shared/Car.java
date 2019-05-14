@@ -15,6 +15,7 @@ public class Car implements Serializable {
 	private String model;
 	private String color;
 	
+	public Car() {}
 	
 	public Car(String plate, String make, String model, String color) {
 		this.plate = plate;

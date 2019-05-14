@@ -17,7 +17,9 @@ public class RideMatchInfo{
 	private RideRole userRole;
 	private PreferredMatch userPreferredMatch;
 	
-	public RideMatchInfo(Matcher.RideMatch match){
+	public RideMatchInfo() {}
+	
+	public RideMatchInfo(Matcher.RideMatch match) {
 		this.id = match.getId();
 		this.rides = match.getRides();
 		this.userRole = match.getUserRole();

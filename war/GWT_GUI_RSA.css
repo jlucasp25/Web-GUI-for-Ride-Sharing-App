@@ -1,11 +1,37 @@
-/** Add css rules here for your application. */
+/**
+CSS Code for Web App styles and formatting.
+João Lucas Pires, Sara Ferreira
+**/
 
+html, body {
+	background: url('bg.png') repeat;
+}
 
-/** Example rules used by the template application (remove for your app) */
+.inputBox {
+	display: inline;
+	width: 20%;
+	height: 20px;
+	border: 2px solid #ccc;
+	margin: 2px;
+	padding: 3px;
+	/*Animate focus*/
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	outline: none;
+}
+
+.inputBox:focus {
+	border: 2px solid #555;
+}
+
+.label {
+	display: block;
+	font-size:10pt;
+	text-align:left;
+}
 h1 {
-  font-size: 2em;
+  font-size: 20pt;
   font-weight: bold;
-  color: #777777;
   margin: 40px 0px 70px;
   text-align: center;
 }
@@ -15,20 +41,3 @@ h1 {
   font-size: 16pt;
 }
 
-/** Most GWT widgets already have a style name defined */
-.gwt-DialogBox {
-  width: 400px;
-}
-
-.dialogVPanel {
-  margin: 5px;
-}
-
-.serverResponseLabelError {
-  color: red;
-}
-
-/** Set ids using widget.getElement().setId("idOfElement") */
-#closeButton {
-  margin: 15px 6px 6px;
-}
