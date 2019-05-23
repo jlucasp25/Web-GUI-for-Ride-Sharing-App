@@ -8,12 +8,26 @@ html, body {
 }
 
 .inputBox {
-	display: inline;
-	width: 20%;
-	height: 20px;
-	border: 2px solid #ccc;
-	margin: 2px;
-	padding: 3px;
+
+	width: 200px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin: 1px;
+	padding: 2px;
+  display: inline-block;
+  padding: 7px;
+  border: 2px solid #d8d4d4;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font: normal 16px/normal "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: rgba(3,4,5,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+ 
 	/*Animate focus*/
 	transition: 0.5s;
 	-webkit-transition: 0.5s;
@@ -24,11 +38,6 @@ html, body {
 	border: 2px solid #555;
 }
 
-.label {
-	display: block;
-	font-size:10pt;
-	text-align:left;
-}
 h1 {
   font-size: 20pt;
   font-weight: bold;
@@ -36,8 +45,125 @@ h1 {
   text-align: center;
 }
 
-.sendButton {
-  display: block;
-  font-size: 16pt;
+.grid {
+	
+	border: 1px solid black;
 }
 
+.gwt-SplitLayoutPanel-HDragger {
+  background: #e7e7e7;
+  cursor: col-resize;
+}
+.gwt-SplitLayoutPanel-VDragger {
+  background: #e7e7e7;
+  cursor: row-resize;
+}
+.cw-DockPanel {
+	width:98%;
+	border: 1px solid black;
+}
+.topLeftCell {
+	border: 3px solid black;
+	background-color: yellow;
+	width: 25%;
+}
+
+.topRightCell {
+	border: 3px solid black;
+	background-color: red;
+}
+
+.bottomLeftCell {
+	border: 3px solid black;
+	background-color: blue;
+}
+
+.bottomRightCell {
+	border: 3px solid black;
+	background-color: green;	
+}
+
+.divstyle {
+	background-color: blue;
+}
+.mainPanel {
+
+}
+.roundFloatPanel {
+	margin: 3px;
+	padding: 3px;
+	border-radius: 25px;
+	border: 1px solid #A9A9A9; /*light grey*/
+	background-color: #F5FFFA; /*mint cream*/
+	-webkit-box-shadow: 3px 4px 16px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 4px 16px -2px rgba(0,0,0,0.75);
+	box-shadow: 3px 4px 16px -2px rgba(0,0,0,0.75);
+}
+
+/**/
+/*Estilos da Sara */
+/**/
+
+.label {
+	display: block;
+	font-size:10pt;
+	text-align:left;
+}
+h1 {
+  font-family: 'Hind', sans-serif;
+  font-size: 20pt;
+  font-weight: bold;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+
+.sendButton {
+ display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 6px;
+  border: 1px solid #018dc4;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 16px/normal "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: rgba(255,255,255,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgb(50,50,50);
+  -webkit-box-shadow: 2px 2px 1px 1px rgba(180,180,180,1) ;
+  box-shadow: 2px 2px 1px 1px rgba(180,180,180,1) ;
+  width: 50px;
+}
+
+.formPanel {
+	padding:5%;
+	border: 1px dashed grey;
+}
+
+.menuicon {
+	display: inline-block;
+	width: 45%;
+	height: auto;
+	margin-left: 15%;
+	margin-top: 10%;
+	/*Animation*/
+	transition: all .2s ease-in-out;
+}
+
+.menuicon:hover {
+	transform: scale(1.1);
+}
+
+.sidemenuLabel {
+	text-align: center;
+	font-family: 'Hind', sans-serif;
+  	font-size: 15px;
+	margin-top: 40%;
+	marign-right:5%;
+}
+
+.menuPanelElement {
+margin-right: 5%;
+}

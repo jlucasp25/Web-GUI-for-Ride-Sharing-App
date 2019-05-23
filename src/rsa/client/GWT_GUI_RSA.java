@@ -1,67 +1,59 @@
 package rsa.client;
 
-import java.awt.Label;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.DeckPanel;
-import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.dom.client.Style.Unit;
+
+import com.google.gwt.user.client.ui.DockLayoutPanel;
+import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.TextBox;
 
-import rsa.server.RideSharingServiceImpl;
-import rsa.shared.RideSharingAppException;
-
+/**
+ * Class GWT_GUI_RSA
+ * Main class for the graphical interface
+ * @author jlucasp25
+ * @implements EntryPoint
+ * 
+ */
 
 public class GWT_GUI_RSA implements EntryPoint {
 	
-	private RideSharingServiceImpl myInstance = null;
+	//Quick access to the root panel
 	private final Panel root = RootPanel.get();
-	private final HTML lineBreak = new HTML();
+	private AuthenticationArea authenticationInstance = null;
 	
-	public void initApp() throws RideSharingAppException {
-		//Does some back stuff in the beginning
-		this.myInstance = new RideSharingServiceImpl();
-		lineBreak.setHTML("<br/>");
-	}
 	public void onModuleLoad() {
-		try {
-			initApp();
-		} catch (RideSharingAppException e) {
-			//RIP
-		}
-			
-		final HTML unameLabel = new HTML();
-		final HTML pswLabel = new HTML();
-		unameLabel.setHTML("<h3 class='label'>Nick: </h3>");
-		pswLabel.setHTML("<h3 class='label'>Password: </h3>");
 		
-		final TextBox unameInput = new TextBox();
-		final TextBox pswInput = new TextBox();
-		unameInput.setStylePrimaryName("inputBox");
-		pswInput.setStylePrimaryName("inputBox");
+		//Set size of root panel to entire page
+		root.setSize("100%","100%");
 		
-		final Button submitBtn = new Button("Login");
-		submitBtn.addClickHandler( new ClickHandler() {
+		//Create a DockPanel and customize it
+		DockLayoutPanel pagePanel = new DockLayoutPanel(Unit.PCT);
+		pagePanel.setSize("100%", "100%");
+		pagePanel.setStylePrimaryName("mainPanel");	
+		
+		//Create and customize 2 panels to make
+		//the base body of the interface
+		FlowPanel sidePanel = new FlowPanel();
+		FlowPanel mainPanel = new FlowPanel();
+		sidePanel.setSize("90%", "100%");
+		sidePanel.addStyleName("roundFloatPanel");
+		mainPanel.setSize("95%", "100%");
+		mainPanel.addStyleName("roundFloatPanel");
+		
+		//Create the SideMenu
+		//The inside elements creation are delegated to
+		//its constructor
+		MenuPanel sideMenu = new MenuPanel();
+		sideMenu.setSize("100%","100%");
+		sidePanel.add(sideMenu);
+		
+		//Bind each panel with its respective parents
+		pagePanel.addWest(sidePanel,20);
+		pagePanel.addEast(mainPanel,80);
+		root.add(pagePanel);
 
-			@Override
-			public void onClick(ClickEvent event) {
-				//gets strings from password and user
-				//calls
-				String s1 = "";
-				String s2 = "";
-				myInstance.authenticate(s1,s2);
-			}
-			
-		});
-		root.add(unameLabel);
-		root.add(unameInput);
-		root.add(lineBreak);
-		root.add(pswLabel);
-		root.add(pswInput);
 		}
 
 }

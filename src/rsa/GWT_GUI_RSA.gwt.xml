@@ -17,13 +17,13 @@
   <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
   <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
 
-  <!-- Other module inherits                                      -->
+  <!-- <inherits name='rsa.server.RideSharingServiceImpl'/>-->
 
   <!-- Specify the app entry point class.                         -->
-  <entry-point class='rsa.client.GWT_GUI_RSA'/>
+  <entry-point class='rsa.client.GWT_GUI_RSA'></entry-point>
 
   <!-- Specify the paths for translatable code                    -->
-  <source path='client'/>
+  <source path='client'></source>
   <source path='shared'/>
 
   <!-- allow Super Dev Mode -->
