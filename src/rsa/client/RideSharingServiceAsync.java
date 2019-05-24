@@ -5,8 +5,7 @@ import java.util.Set;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
-import rsa.service.Matcher;
-import rsa.service.Users;
+
 import rsa.shared.Location;
 import rsa.shared.PreferredMatch;
 import rsa.shared.RideMatchInfo;
@@ -40,11 +39,4 @@ public interface RideSharingServiceAsync {
 
 	void updateRide(long rideId, Location current,AsyncCallback< Set<RideMatchInfo> > callback);
 
-	void getAllUsers(AsyncCallback<Users> callback);
-
-	void setAllUsers(Users allUsers, AsyncCallback<Void> callback);
-
-	void getMatcher(AsyncCallback<Matcher> callback);
-
-	void setMatcher(Matcher matcher, AsyncCallback<Void> callback);
 }

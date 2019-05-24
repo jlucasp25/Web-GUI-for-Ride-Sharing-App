@@ -1,4 +1,5 @@
 package rsa.shared;
+import java.io.Serializable;
 import java.util.Map;
 
 import rsa.quad.Trie;
@@ -11,7 +12,9 @@ import rsa.service.Ride;
  * This is a DAO (Data Access Object) that provides information on current ride matches to external components.
  * @author João Lucas Pires, Sara Ferreira
  */
-public class RideMatchInfo{
+public class RideMatchInfo implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	private long id;
 	private Map<RideRole,Ride> rides;
 	private RideRole userRole;

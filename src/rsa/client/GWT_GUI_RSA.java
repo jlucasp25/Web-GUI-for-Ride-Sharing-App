@@ -2,8 +2,8 @@ package rsa.client;
 
 
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Style.Unit;
-
 import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
@@ -21,7 +21,12 @@ public class GWT_GUI_RSA implements EntryPoint {
 	
 	//Quick access to the root panel
 	private final Panel root = RootPanel.get();
+	
+	//Graphical Instances
 	private AuthenticationArea authenticationInstance = null;
+	
+	//Server instances
+	//RideSharingServiceAsync rssService = GWT.create(RideSharingService.class);
 	
 	public void onModuleLoad() {
 		
@@ -41,6 +46,11 @@ public class GWT_GUI_RSA implements EntryPoint {
 		sidePanel.addStyleName("roundFloatPanel");
 		mainPanel.setSize("95%", "100%");
 		mainPanel.addStyleName("roundFloatPanel");
+		
+		//
+		authenticationInstance = new AuthenticationArea(true); //vamos registar
+		mainPanel.add(authenticationInstance);
+		//
 		
 		//Create the SideMenu
 		//The inside elements creation are delegated to

@@ -1,5 +1,7 @@
 package rsa.shared;
 
+import java.io.Serializable;
+
 import rsa.quad.HasPoint;
 
 /**
@@ -8,7 +10,8 @@ import rsa.quad.HasPoint;
  * @see rsa.quad.HasPoint
  * @author João Lucas Pires, Sara Ferreira
  */
-public class Location implements HasPoint {
+public class Location implements HasPoint, Serializable {
+	private static final long serialVersionUID = 1L;
 	private double x;
 	private double y;
 	

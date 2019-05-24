@@ -7,13 +7,13 @@
 
   <!-- Servlets -->
   <servlet>
-    <servlet-name>rideSharingServlet</servlet-name>
+    <servlet-name>RideSharingServiceImpl</servlet-name>
     <servlet-class>rsa.server.RideSharingServiceImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>rideSharingServlet</servlet-name>
-    <url-pattern>/gwt_gui_rsa/rss</url-pattern>
+    <servlet-name>RideSharingServiceImpl</servlet-name>
+    <url-pattern>/gwt_gui_rsa/rsa</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->

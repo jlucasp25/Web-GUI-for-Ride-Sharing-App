@@ -6,8 +6,7 @@ import java.util.Set;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
-import rsa.service.Matcher;
-import rsa.service.Users;
+
 import rsa.shared.Location;
 import rsa.shared.PreferredMatch;
 import rsa.shared.RideMatchInfo;
@@ -43,12 +42,6 @@ public interface RideSharingService extends RemoteService {
 
 	Set<RideMatchInfo> updateRide(long rideId, Location current);
 
-	Users getAllUsers();
 
-	void setAllUsers(Users allUsers);
-
-	Matcher getMatcher();
-
-	void setMatcher(Matcher matcher);
 
 }

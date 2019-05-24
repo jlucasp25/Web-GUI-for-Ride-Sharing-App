@@ -22,7 +22,7 @@ public class RideSharingServiceImpl extends RemoteServiceServlet implements Ride
 	private Manager managerInstance = null;
 	
 	public RideSharingServiceImpl() throws RideSharingAppException {
-	this.managerInstance = Manager.getInstance();
+		this.managerInstance = Manager.getInstance();
 	}
 	
 	public void acceptMatch(long rideId, long matchId) {
