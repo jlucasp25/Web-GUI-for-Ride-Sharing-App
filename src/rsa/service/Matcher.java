@@ -123,13 +123,25 @@ public class Matcher implements Serializable {
 				RideMatch rm = new RideMatch(ride,aux);
 				if (rm.matchable()) {
 					matches.put(rm.getId(), rm);
-					RideMatchInfo rmi = new RideMatchInfo(rm);
+					RideMatchInfo rmi = getRideMatchInfo(rm);
 					set.add(rmi);
 				}
 			}
 			return set;
 		}
 		return null;
+	}
+	
+	/**
+	 * Função criada para resolver o problema das dependencias
+	 * @param matcher
+	 * @return
+	 */
+	RideMatchInfo getRideMatchInfo(Matcher.RideMatch matcher) {
+		RideMatchInfo rmi = new RideMatchInfo();
+		rmi.setUserPreferredMatch(matcher.getUserPreferredMatch());
+		rmi.setUserRole(matcher.getUserRole());
+		return rmi;
 	}
 
 	/**
@@ -201,6 +213,7 @@ public class Matcher implements Serializable {
 		public void setUserPreferredMatch(PreferredMatch userPreferredMatch) {
 			this.userPreferredMatch = userPreferredMatch;
 		}
+		
 	}
 
 }

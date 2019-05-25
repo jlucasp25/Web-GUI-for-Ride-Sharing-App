@@ -10,7 +10,7 @@ import rsa.quad.HasPoint;
  * @see rsa.quad.HasPoint
  * @author João Lucas Pires, Sara Ferreira
  */
-public class Location implements HasPoint, Serializable {
+public class Location implements Serializable, HasPoint {
 	private static final long serialVersionUID = 1L;
 	private double x;
 	private double y;

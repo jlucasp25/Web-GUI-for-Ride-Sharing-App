@@ -3,7 +3,7 @@ import java.lang.String;
 import java.util.Comparator;
 import java.util.UUID;
 
-import rsa.quad.HasPoint;
+
 import rsa.shared.Car;
 import rsa.shared.Location;
 import rsa.shared.PreferredMatch;
@@ -18,7 +18,7 @@ import rsa.shared.RideMatchInfo;
  * It implements the RideMatchInfoSorter interface and subclasses Comparator
  * @author João Lucas Pires, Sara Ferreira
  */
-public class Ride implements HasPoint, RideMatchInfoSorter {
+public class Ride implements RideMatchInfoSorter {
 	private float cost;
 	private User user;
 	private String plate;

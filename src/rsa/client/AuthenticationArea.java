@@ -56,45 +56,6 @@ public class AuthenticationArea extends Composite {
 		}
 		submitBtn.setStylePrimaryName("sendButton");
 		
-		
-		
-		
-		
-		//Create callback for submit button
-		//Teste para REGISTER
-	/*
-		submitBtn.addClickHandler(new ClickHandler() {
-			@Override
-			public void onClick(ClickEvent event) {
-				String nick = nickInput.getText();
-				String name = unameInput.getText();
-				String password = pswInput.getText();
-				
-				try {
-					rssService.register(nick,name,password,new AsyncCallback<Boolean>() {
-						
-					//	@Override
-						public void onSuccess(Boolean result) {
-							if (result)
-								Window.alert("Registou-se com sucesso!");
-							else
-								Window.alert("Ocorreu um erro no registo!");
-						}
-						
-						//@Override
-						public void onFailure(Throwable caught) {
-							if (caught instanceof RideSharingAppException)
-								Window.alert(caught.getMessage());
-						}
-					});
-				} catch (RideSharingAppException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		});
-		*/
-		
 		//Bind elements with respective parents
 		formPanel.add(unameInput); 
 		if (isRegister)

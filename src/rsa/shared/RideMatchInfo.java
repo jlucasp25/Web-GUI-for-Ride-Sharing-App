@@ -1,9 +1,10 @@
 package rsa.shared;
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.Map;
 
 import rsa.quad.Trie;
-import rsa.service.Matcher;
+
 import rsa.service.Ride;
 
 /**
@@ -16,19 +17,12 @@ public class RideMatchInfo implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	private long id;
-	private Map<RideRole,Ride> rides;
+	private Map<RideRole,Ride> rides = new HashMap<RideRole,Ride>();
 	private RideRole userRole;
 	private PreferredMatch userPreferredMatch;
 	
 	public RideMatchInfo() {}
-	
-	public RideMatchInfo(Matcher.RideMatch match) {
-		this.id = match.getId();
-		this.rides = match.getRides();
-		this.userRole = match.getUserRole();
-		this.userPreferredMatch = match.getUserPreferredMatch();
-	}
-	
+		
 	public Car getCar() {
 		Ride ride = rides.get(RideRole.DRIVER);
 		return ride.getUser().getCar(ride.getPlate());

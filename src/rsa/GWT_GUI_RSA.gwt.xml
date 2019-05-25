@@ -7,7 +7,9 @@
   "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
 <module rename-to='gwt_gui_rsa'>
   <inherits name="rsa.service.Ride"></inherits><!-- Inherit the core Web Toolkit stuff.                        --><inherits name="com.google.gwt.user.theme.clean.Clean" />
-  <inherits name='com.google.gwt.user.User'/><entry-point class='rsa.client.GWT_GUI_RSA'></entry-point>
+  <inherits name="com.google.maps.gwt.GoogleMaps"></inherits>
+  <inherits name='com.google.gwt.user.User'/>
+  <entry-point class='rsa.client.GWT_GUI_RSA'></entry-point>
 
   <!-- Specify the paths for translatable code                    -->
 
